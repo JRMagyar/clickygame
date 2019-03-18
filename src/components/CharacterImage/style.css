@@ -1,0 +1,8 @@
+.character-holder{
+    float: left;
+    background-color: aliceblue;
+    border: 2px solid black;
+    margin: 20px;
+    height: 128px;
+    padding-top: 5px;
+}

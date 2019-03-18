@@ -1,0 +1,9 @@
+.wrapper {
+  padding: 20px;
+  background: #ECEFF1;
+  flex-flow: row wrap;
+  overflow: auto;
+  max-width: 690px;
+  margin-left: auto;
+  margin-right: auto;
+}

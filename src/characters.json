@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "name": "Abigail",
+        "image":"/assets/images/abigail.png"
+    },
+    {
+        "id": 2,
+        "name": "Alex",
+        "image": "/assets/images/alex.png"
+    },
+    {
+        "id": 3,
+        "name": "Elliott",
+        "image": "/assets/images/elliott.png"
+    },
+    {
+        "id": 4,
+        "name": "Emily",
+        "image": "/assets/images/emily.png"
+    },
+    {
+        "id": 5,
+        "name": "Haley",
+        "image": "/assets/images/haley.png"
+    },
+    {
+        "id": 6,
+        "name": "Harvey",
+        "image": "/assets/images/harvey.png"
+    },
+    {
+        "id": 7,
+        "name": "Leah",
+        "image": "/assets/images/leah.png"
+    },
+    {
+        "id": 8,
+        "name": "Maru",
+        "image": "/assets/images/maru.png"
+    },
+    {
+        "id": 9,
+        "name": "Penny",
+        "image": "/assets/images/penny.png"
+    },
+    {
+        "id": 10,
+        "name": "Sam",
+        "image": "/assets/images/sam.png"
+    },
+    {
+        "id": 11,
+        "name": "Sebastian",
+        "image": "/assets/images/sebastian.png"
+    },
+    {
+        "id": 12,
+        "name": "Shane",
+        "image": "/assets/images/shane.png"
+    }
+    
+]
