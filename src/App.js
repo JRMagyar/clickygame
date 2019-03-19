@@ -13,14 +13,28 @@ class App extends Component {
     };
 
     clickImage = id => {
-        if(this.state.clickedCharacters.indexOf(id) === -1){
-            const clickedCharacters = this.state.clickedCharacters;
-            clickedCharacters.push(id);
-            this.setState({clickedCharacters : clickedCharacters})
-            this.shuffleImages();
+        if(this.state.clickedCharacters.length === 11){
+            if(this.state.clickedCharacters.indexOf(id) === -1){
+                alert("You won!")
+                this.setState({clickedCharacters : []})
+                this.shuffleImages();
+            }
+            else{
+                this.setState({clickedCharacters : []})
+                this.shuffleImages();
+            }
         }
         else{
-            this.setState({clickedCharacters : []})
+            if(this.state.clickedCharacters.indexOf(id) === -1){
+                const clickedCharacters = this.state.clickedCharacters;
+                clickedCharacters.push(id);
+                this.setState({clickedCharacters : clickedCharacters})
+                this.shuffleImages();
+            }
+            else{
+                this.setState({clickedCharacters : []})
+                this.shuffleImages();
+            }
         }
 
     };
