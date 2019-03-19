@@ -3,9 +3,9 @@ import "./style.css";
 
 function CharacterImage(props){
     return(
-        <div className="character-holder">
+        <span onClick={() => props.clickImage(props.id)} className="character-holder">
             <img alt={props.alt} src={props.image} id={props.id}/>
-        </div>
+        </span>
     );
 }
 
