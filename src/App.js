@@ -8,7 +8,8 @@ import SiteWrapper from "./components/SiteWrapper";
 class App extends Component {
     state = {
         allCharacters: characters,
-        clickedCharacters: []
+        clickedCharacters: [],
+        highscore: 0
 
     };
 
@@ -16,22 +17,27 @@ class App extends Component {
         if(this.state.clickedCharacters.length === 11){
             if(this.state.clickedCharacters.indexOf(id) === -1){
                 alert("You won!")
+                this.setState({highscore: 12})
                 this.setState({clickedCharacters : []})
                 this.shuffleImages();
             }
             else{
+                if(this.state.highscore < 11){
+                    this.setState({highscore: 11})
+                }
                 this.setState({clickedCharacters : []})
                 this.shuffleImages();
             }
         }
         else{
             if(this.state.clickedCharacters.indexOf(id) === -1){
-                const clickedCharacters = this.state.clickedCharacters;
-                clickedCharacters.push(id);
-                this.setState({clickedCharacters : clickedCharacters})
+                this.state.clickedCharacters.push(id);
                 this.shuffleImages();
             }
             else{
+                if(this.state.clickedCharacters.length > this.state.highscore){
+                    this.setState({highscore: this.state.clickedCharacters.length})
+                }
                 this.setState({clickedCharacters : []})
                 this.shuffleImages();
             }
@@ -53,7 +59,7 @@ class App extends Component {
     render(){
         return(
             <SiteWrapper>
-                <Title score={this.state.clickedCharacters.length}></Title>
+                <Title score={this.state.clickedCharacters.length} highscore={this.state.highscore}></Title>
                 <CharacterWrapper>
                 {this.state.allCharacters.map(character => (
                     <CharacterImage
